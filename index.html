@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Money Tracker App</h1>
+
+
+    <div class="inputsection">
+        <label for="categoryselect">Category:</label>
+        <select id="categoryselect" required>
+            <option value="" disabled selected>Select Category</option>
+            <option value="College Fee">College fee</option>
+            <option value="Rent">Rent</option>
+            <option value="Transport">Transport</option>
+            <option value="Food">Food</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Snacks and Drinks">Snacks and Drinks</option>
+        </select>
+
+        <label for="amountinput">Amount:</label>
+        <input type="number" id="amountinput" placeholder="Enter the Amount">
+
+        <label for="dateinput">Date:</label>
+        <input type="date" id="dateinput" value="">
+
+        <button id="addbtn" type="submit">Add</button>
+    </div>
+
+    <div class="expenseslist">
+
+        <h2>Expenses List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody id="expensetablebody">
+
+            </tbody>
+
+            <tfoot>
+                <td>Total:</td>
+                <td id="totalamount"></td>
+                <td></td>
+                <td></td>
+            </tfoot>
+        </table>
+
+    </div>
+
+
+    <script src="logic.js"></script>
+</body>
+
+</html>

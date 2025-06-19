@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Headings Centered */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+/* Input Section Styling */
+.inputsection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  align-items: center;
+}
+
+.inputsection label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.inputsection select,
+.inputsection input[type="number"],
+.inputsection input[type="date"],
+.inputsection button {
+  padding: 10px;
+  min-width: 150px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+.inputsection button {
+  background-color: goldenrod;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inputsection button:hover {
+  background-color: darkgoldenrod;
+}
+
+/* Expenses Table */
+.expenseslist {
+  max-width: 800px;
+  margin: 20px auto;
+  overflow-x: auto; /* allows horizontal scroll on small screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  min-width: 600px; /* prevent shrinking too small */
+}
+
+th, td {
+  border: 1px solid #888;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #ffd86e;
+}
+
+tfoot td {
+  font-weight: bold;
+  background-color: #f0f0f0;
+}
+
+/* Delete Button */
+.deletebtn {
+  padding: 5px 12px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.deletebtn:hover {
+  background-color: darkred;
+}
+
+/* 🔽 MEDIA QUERIES: Mobile Friendly */
+@media (max-width: 830px) {
+  .inputsection {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 15px;
+  }
+
+  .inputsection label {
+    margin-right: 0;
+  }
+
+  .inputsection select,
+  .inputsection input[type="number"],
+  .inputsection input[type="date"],
+  .inputsection button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  table {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .inputsection {
+    padding: 10px;
+  }
+
+  .inputsection select,
+  .inputsection input,
+  .inputsection button {
+    font-size: 0.95rem;
+  }
+
+  th, td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .deletebtn {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+}
